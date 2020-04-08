@@ -2,7 +2,7 @@
 
 ##### [Project](https://github.com/bandirom/django_layout "django_layout")  without docker containers.
 
-####Included:
+#### Included:
 +   Python 3.8.2
 +   Gunicorn
 +   Django-allauth
@@ -14,15 +14,16 @@
 +   Only WSGI
 
 ### Instalation:
-- #####Create a project folder
-- #####Create a virtualenv (pipenv, virtualenv)
-- #####Copy project to a folder
-- #####Install the packages from requirement.txt
-
+- ##### Create a project folder
+- ##### Create a virtualenv (pipenv, virtualenv)
+- ##### Copy project to a folder
+- ##### Install the packages from requirement.txt:
 
     pip install -r Django-layout/requirements.txt
  
 ### Testing (from root project folder) - dev. version:
+
+
     docker-compose up -d --build
     
 In the end shout be:
