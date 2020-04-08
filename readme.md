@@ -19,7 +19,7 @@
 - ##### Copy project to a folder
 - ##### Install the packages from requirement.txt:
 
-    pip install -r Django-layout/requirements.txt
+        pip install -r Django-layout/requirements.txt
  
 ### Testing (from root project folder) - dev. version:
 
@@ -61,13 +61,14 @@ In the end shout be:
     docker-compose exec web python manage.py collectstatic
 
 
-####Other commands:
+#### Other commands:
 ##### Does database exist?
 ##
 ###### For dev:
     docker-compose exec db psql --username=django_layout_db_dev --dbname=django_layout_db_dev
 ###### For prod:
     docker-compose exec db psql --username=django_layout_db_prod --dbname=django_layout_db_prod
+#### Let's go to [localhost](http://localhost "localhost") and check
 
 #### If you have the errors like:
 
