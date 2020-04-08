@@ -35,8 +35,7 @@ In the end shout be:
 #### Cheking of running containers:
     docker ps
 
-###### After run the commands:
-    
+##### After run the commands:
     
     docker-compose exec web python manage.py migrate
     docker-compose exec web python manage.py createsuperuser
