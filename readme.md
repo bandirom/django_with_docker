@@ -76,4 +76,11 @@ In the end shout be:
 
 #### Run the command:
         docker-compose down -v
-######  And try again :)
+####  And try again :)
+
+#### If doesn't work or Nginx 500 Error, delete the volume:
+        docker volume ls
+        docker volume rm <YourProjectName>_postgres_data
+     
+#### Don't forget to make a migrations and createsuperuser
+####  And try again
