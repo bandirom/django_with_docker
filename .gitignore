@@ -2,3 +2,4 @@ https://github.com/github/gitignore/blob/master/Python.gitignore
 static/
 media/
 Pipfile*
+__pycache__/
