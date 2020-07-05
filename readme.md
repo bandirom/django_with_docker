@@ -4,14 +4,18 @@
 
 #### Included:
 +   Python 3.8.2
-+   Gunicorn
 +   Django-allauth
-+   pyOpenSSL (not use now)
-+   PostgreSql:12.0-alpine
-+   Nginx
++   djangorestframework
++   django-defender
++   channels
 +   Basic HTML/CSS/JS
 +   Develop and production docker-template
-+   Only WSGI
++   PostgreSql
++   Redis
++   Nginx
++   Gunicorn
++   Daphne
+
 
 ### Instalation:
 - ##### Create a project folder
@@ -26,7 +30,7 @@
 
     docker-compose up -d --build
     
-In the end shout be:
+### In the end shout be:
 
 
     Creating <YourFolderName>_db_1 ... done
