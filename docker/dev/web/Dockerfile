@@ -35,5 +35,5 @@ COPY ./docker/dev/web/entrypoint.sh /entrypoint.sh
 COPY ./web /usr/src/web/
 
 # run entrypoint.sh
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["sh", "/entrypoint.sh"]
 

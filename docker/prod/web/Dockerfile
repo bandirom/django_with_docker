@@ -88,4 +88,4 @@ RUN chmod +x /entrypoint.sh
 USER www
 
 ## run entrypoint.sh
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["sh", "/entrypoint.sh"]
