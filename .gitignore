@@ -1,5 +1,5 @@
 https://github.com/github/gitignore/blob/master/Python.gitignore
-static/
+web/static/
 media/
 Pipfile
 Pipfile*

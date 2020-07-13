@@ -22,7 +22,6 @@ urlpatterns = [
     path('summernote/', include('django_summernote.urls')),
     path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('api/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
-
 ]
 
 handler404 = 'app.views.custom_handler404'
