@@ -16,7 +16,6 @@ services:
     depends_on:
       - db
     restart: always
-
   db:
     image: postgres:12.0-alpine
     hostname: postgres
@@ -28,7 +27,28 @@ services:
   redis:
     image: redis:6.0.1-alpine
     restart: always
-
+  celery:
+    build:
+      context: .
+      dockerfile: docker/dev/web/Dockerfile
+    command: celery -A src worker -l info
+    volumes:
+      - ./web/:/usr/src/web/
+    env_file:
+      - docker/dev/env/.env
+    depends_on:
+      - redis
+  celery-beat:
+    build:
+      context: .
+      dockerfile: docker/dev/web/Dockerfile
+    command: celery -A src beat -l info
+    volumes:
+      - ./web/:/usr/src/web/
+    env_file:
+      - docker/dev/env/.env
+    depends_on:
+      - redis
 
 volumes:
   postgres_data:

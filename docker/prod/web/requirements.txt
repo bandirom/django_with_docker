@@ -10,7 +10,7 @@ Pillow
 django-defender
 Pillow
 django-summernote
-
 channels
 channels_redis
 daphne
+celery

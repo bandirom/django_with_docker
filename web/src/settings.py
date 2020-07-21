@@ -2,6 +2,7 @@ import os
 from .allauth_settings import *
 from .simple_jwt import *
 from .defender_settings import *
+from .celery_settings import *
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DEBUG = int(os.environ.get("DEBUG", default=1))
