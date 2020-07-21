@@ -15,6 +15,7 @@
 +   Nginx
 +   Gunicorn
 +   Daphne
++   Celery
 
 
 ### Instalation:
