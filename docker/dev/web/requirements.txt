@@ -17,3 +17,6 @@ daphne
 celery
 
 
+# for jupyter notebook - include django-extensions
+jupyter
+ipython

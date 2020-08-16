@@ -1,8 +1,10 @@
 import os
-from .allauth_settings import *
-from .simple_jwt import *
-from .defender_settings import *
-from .celery_settings import *
+from .additional.allauth_settings import *
+from .additional.simple_jwt import *
+from .additional.defender_settings import *
+from .additional.celery_settings import *
+from .additional.shell_plus import *
+from .additional.logger_settings import *
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DEBUG = int(os.environ.get("DEBUG", default=1))
@@ -14,6 +16,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 
 INSTALLED_APPS = [
     'app.apps.AppConfig',
+    'user_profile.apps.UserProfileConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

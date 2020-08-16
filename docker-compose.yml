@@ -5,14 +5,14 @@ services:
     build:
       context: .
       dockerfile: docker/dev/web/Dockerfile
-    command: python manage.py runserver 0.0.0.0:8000 # _plus 0.0.0.0:8000 --cert-file cert.crt
+    entrypoint: /entrypoint.sh
     volumes:
       - ./web/:/usr/src/web/
     ports:
       - 8000:8000
     env_file:
       - docker/dev/env/.env
-      - docker/accounts.env
+      - docker/.env.accounts
     depends_on:
       - db
     restart: always
@@ -50,5 +50,16 @@ services:
     depends_on:
       - redis
 
+  jupyter_notebook:
+    build:
+      context: .
+      dockerfile: docker/dev/web/Dockerfile
+    command: python manage.py shell_plus --notebook
+    depends_on:
+      - web
+    ports:
+    - 8888:8888
+    env_file:
+      - docker/dev/env/.env
 volumes:
   postgres_data:

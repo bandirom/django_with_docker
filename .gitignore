@@ -1,4 +1,3 @@
-https://github.com/github/gitignore/blob/master/Python.gitignore
 web/static/
 
 Pipfile
@@ -6,3 +5,5 @@ Pipfile*
 __pycache__/
 .idea/
 celerybeat*
+.local/
+*.log

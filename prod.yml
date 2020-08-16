@@ -41,14 +41,6 @@ services:
   redis:
     image: redis:6.0.1-alpine
     restart: always
-#  workerserver:
-#    build:
-#      context: .
-#      dockerfile: docker/prod/web/Dockerfile
-##    command: python /home/www/web/manage.py runworker
-#    depends_on:
-#      - db
-#      - redis
 
 volumes:
   postgres_data:

@@ -1,5 +1,9 @@
+import logging
+
 from django.shortcuts import render
 from django.template import RequestContext
+
+logger = logging.getLogger(__name__)
 
 
 def custom_handler404(request, exception):
@@ -17,6 +21,7 @@ def custom_handler500(request):
 
 
 def index(request):
+    logger.warning('main index.html')
     return render(request, 'app/index.html', {})
 
 

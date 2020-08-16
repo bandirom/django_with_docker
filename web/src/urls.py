@@ -3,8 +3,10 @@ from django.contrib import admin
 from django.contrib.sitemaps.views import sitemap
 from django.urls import path, include
 from django.conf.urls.static import static
-from app.sitemaps import StaticViewSitemap, ProfileSitemap
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
+
+from app.sitemaps import StaticViewSitemap
+from user_profile.sitemap import ProfileSitemap
 
 
 sitemaps: dict = {
@@ -14,6 +16,7 @@ sitemaps: dict = {
 
 urlpatterns = [
     path('', include('app.urls')),
+    path('profile/', include('user_profile.urls')),
     path('admin/', admin.site.urls),
     path('admin/defender/', include('defender.urls')),
     path('sitemap.xml', sitemap, {'sitemaps': sitemaps}),
